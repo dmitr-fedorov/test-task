@@ -7,7 +7,7 @@ void FileReader::read(const std::string& fileName,
     std::ifstream file(fileName);
     if(!file.is_open())
     {
-        throw std::runtime_error("Failed to open file.");
+        throw std::runtime_error("Could not open the input file.");
     }
 
     std::string word;
