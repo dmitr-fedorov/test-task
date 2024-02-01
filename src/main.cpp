@@ -26,8 +26,15 @@ int main()
     }
     catch(std::exception& e)
     {
-        logFile.write(std::string(e.what()) + "\n");
-        return -1;
+        try
+        {
+            logFile.write(std::string(e.what()) + "\n");
+            return -1;
+        }
+        catch(...)
+        {
+            return -1;
+        }
     }
 
     return 0;
