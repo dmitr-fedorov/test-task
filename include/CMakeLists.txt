@@ -1,6 +1,7 @@
 set(HEADERS
    file_reader.h
    file_writer.h
+   log_file.h
    words_counter.h
 )
 
