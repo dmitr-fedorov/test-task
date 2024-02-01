@@ -22,13 +22,13 @@ int main()
         fileReader.read(DEFAULT_INPUT_FILE_NAME, wordsCounter);
         fileWriter.write(DEFAULT_OUTPUT_FILE_NAME, wordsCounter);
 
-        logFile.write("Words counted successfully.\n");
+        logFile.write("Words counted successfully.");
     }
     catch(std::exception& e)
     {
         try
         {
-            logFile.write(std::string(e.what()) + "\n");
+            logFile.write(e.what());
             return -1;
         }
         catch(...)

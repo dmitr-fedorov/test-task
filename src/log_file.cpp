@@ -23,5 +23,5 @@ void LogFile::write(const std::string& str)
     std::time_t time = std::chrono::system_clock::to_time_t(now);
     std::tm* tm = std::localtime(&time);
 
-    m_file << std::put_time(tm, "%d-%m-%Y %H:%M:%S") << " | " << str;
+    m_file << std::put_time(tm, "%d-%m-%Y %H:%M:%S") << " | " << str << "\n";
 }
